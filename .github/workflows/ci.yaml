@@ -28,11 +28,9 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
-      - name: Build Docker Image
+      - name: Build Docker & PushImage
         id: build-image
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: p13dr0h/math-ci:latest
-          context: .
-          file: Dockerfile
+          tags: c4st3ll4n/math-ci:latest
